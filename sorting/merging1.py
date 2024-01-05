@@ -1,5 +1,4 @@
-# Copyright (C) Deepali Srivastava - All Rights Reserved
-# This code is part of DSA course available on CourseGalaxy.com  
+
 
 #a[low1]...a[up1] and a[low2]...a[up2] merged to temp[low1]..temp[up2]
 def merge(a,temp,low1,up1,low2,up2):

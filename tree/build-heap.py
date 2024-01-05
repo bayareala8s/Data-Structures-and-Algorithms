@@ -1,5 +1,3 @@
-# Copyright (C) Deepali Srivastava - All Rights Reserved
-# This code is part of DSA course available on CourseGalaxy.com  
 
 def build_heap_top_down(a, n):
     for i in range(2, n+1):

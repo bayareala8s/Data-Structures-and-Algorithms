@@ -1,5 +1,4 @@
-# Copyright (C) Deepali Srivastava - All Rights Reserved
-# This code is part of DSA course available on CourseGalaxy.com  
+
 
 def binary_search(a, n, searchValue):
     return _search(a, 0, n-1, searchValue)

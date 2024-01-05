@@ -1,5 +1,3 @@
-# Copyright (C) Deepali Srivastava - All Rights Reserved
-# This code is part of DSA course available on CourseGalaxy.com  
 
 def heap_sort(a, n):
     build_heap_bottom_up(a, n)

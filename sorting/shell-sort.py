@@ -1,5 +1,4 @@
-# Copyright (C) Deepali Srivastava - All Rights Reserved
-# This code is part of DSA course available on CourseGalaxy.com  
+
 
 def shell_sort(a):
     h = int(input("Enter maximum increment(odd value) : "))

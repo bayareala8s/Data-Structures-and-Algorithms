@@ -1,5 +1,4 @@
-# Copyright (C) Deepali Srivastava - All Rights Reserved
-# This code is part of DSA course available on CourseGalaxy.com  
+
 
 def insertion_sort(a):
     for i in range(1,len(a)):  

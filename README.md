@@ -18,6 +18,30 @@ Here are some common Big O complexities:
 
 Big O notation allows developers to analyze and compare the efficiency of algorithms without getting bogged down in the details of hardware or software implementation. It helps in making informed decisions about algorithm selection and optimization based on the specific requirements of an application.
 
+### Analyzing time complexity
+
+Time complexity analysis involves evaluating the amount of time an algorithm takes to execute as a function of the input size. It helps us understand how the algorithm's runtime grows as the input size increases. Time complexity is typically expressed using Big O notation, which provides an upper bound on the growth rate of the algorithm's runtime.
+
+Here's a step-by-step guide to analyzing time complexity:
+
+1. **Identify Basic Operations**: Identify the basic operations or steps performed by the algorithm. This could be arithmetic operations, comparisons, assignments, function calls, loop iterations, etc.
+
+2. **Count Operations**: Determine the number of times each basic operation is executed based on the input size. This often involves analyzing loops, recursive calls, and other control structures.
+
+3. **Express Complexity**: Express the total number of operations as a function of the input size. Focus on the dominant term that contributes the most to the overall runtime, and ignore lower-order terms and constant factors.
+
+4. **Use Big O Notation**: Use Big O notation to express the time complexity. Big O notation describes the upper bound of the growth rate of the algorithm's runtime. It provides a simple way to classify algorithms based on their efficiency and scalability.
+
+5. **Classify Complexity**: Classify the time complexity based on the dominant term:
+   - O(1): Constant time complexity. The algorithm's runtime is independent of the input size.
+   - O(log n): Logarithmic time complexity. The algorithm's runtime grows logarithmically with the input size.
+   - O(n): Linear time complexity. The algorithm's runtime grows linearly with the input size.
+   - O(n log n): Linearithmic time complexity. The algorithm's runtime grows in proportion to the input size multiplied by the logarithm of the input size.
+   - O(n^2): Quadratic time complexity. The algorithm's runtime grows quadratically with the input size.
+   - O(2^n): Exponential time complexity. The algorithm's runtime doubles with each additional input element.
+   - O(n!): Factorial time complexity. The algorithm's runtime grows factorially with the input size.
+
+Analyzing time complexity helps in understanding the scalability and performance characteristics of an algorithm. It allows us to compare different algorithms and make informed decisions about algorithm selection and optimization.
 
 ### Analyzing space complexity
 

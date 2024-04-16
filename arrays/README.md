@@ -164,3 +164,45 @@ print(has_pair_with_sum(nums, target))  # Output: False
 ```
 
 In this implementation, the `has_pair_with_sum` function takes a sorted array `nums` and a target integer `target`. It initializes two pointers, `left` and `right`, and iterates through the array using the two pointers. If the sum of the numbers at the current positions of the pointers equals the target, it returns `True`. If the sum is less than the target, it moves the left pointer to the right to increase the sum, and if the sum is greater than the target, it moves the right pointer to the left to decrease the sum. If the loop completes without finding a pair, it returns `False`.
+
+
+Given two sorted integer arrays arr1 and arr2, return a new array that combines both of them and is also sorted.
+
+You can merge the two sorted arrays into a new sorted array by using the two pointers technique. Initialize two pointers, one for each array, and compare the elements at the corresponding positions. Add the smaller element to the new array, and move the pointer of the array from which the element was taken. Repeat this process until you reach the end of both arrays.
+
+Here's how you can implement this in Python:
+
+```python
+def merge_sorted_arrays(arr1, arr2):
+    merged = []
+    i, j = 0, 0
+    
+    # Compare elements from both arrays and add the smaller one to the merged array
+    while i < len(arr1) and j < len(arr2):
+        if arr1[i] < arr2[j]:
+            merged.append(arr1[i])
+            i += 1
+        else:
+            merged.append(arr2[j])
+            j += 1
+    
+    # Add any remaining elements from arr1
+    while i < len(arr1):
+        merged.append(arr1[i])
+        i += 1
+    
+    # Add any remaining elements from arr2
+    while j < len(arr2):
+        merged.append(arr2[j])
+        j += 1
+    
+    return merged
+
+# Example usage
+arr1 = [1, 3, 5]
+arr2 = [2, 4, 6, 7]
+
+print(merge_sorted_arrays(arr1, arr2))  # Output: [1, 2, 3, 4, 5, 6, 7]
+```
+
+In this implementation, the `merge_sorted_arrays` function takes two sorted arrays `arr1` and `arr2` as input. It initializes two pointers, `i` and `j`, for each array and iterates through both arrays using these pointers. It compares the elements at the current positions of the pointers and adds the smaller one to the `merged` array. After reaching the end of one array, it adds any remaining elements from the other array. Finally, it returns the merged array.

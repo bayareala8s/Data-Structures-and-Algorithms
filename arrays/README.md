@@ -206,3 +206,38 @@ print(merge_sorted_arrays(arr1, arr2))  # Output: [1, 2, 3, 4, 5, 6, 7]
 ```
 
 In this implementation, the `merge_sorted_arrays` function takes two sorted arrays `arr1` and `arr2` as input. It initializes two pointers, `i` and `j`, for each array and iterates through both arrays using these pointers. It compares the elements at the current positions of the pointers and adds the smaller one to the `merged` array. After reaching the end of one array, it adds any remaining elements from the other array. Finally, it returns the merged array.
+
+
+Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+
+You can solve this problem by iterating through both strings using two pointers, one for each string. At each step, compare the characters at the current positions of the pointers. If they match, move both pointers to the next character in their respective strings. If they don't match, only move the pointer for the second string. Continue this process until you reach the end of the first string.
+
+Here's how you can implement this in Python:
+
+```python
+def is_subsequence(s, t):
+    # Initialize pointers for both strings
+    i, j = 0, 0
+    
+    # Iterate through both strings
+    while i < len(s) and j < len(t):
+        # If characters match, move both pointers
+        if s[i] == t[j]:
+            i += 1
+        # Move pointer for string t
+        j += 1
+    
+    # If all characters of s have been matched, s is a subsequence of t
+    return i == len(s)
+
+# Example usage
+s = "abc"
+t = "ahbgdc"
+print(is_subsequence(s, t))  # Output: True
+
+s = "axc"
+t = "ahbgdc"
+print(is_subsequence(s, t))  # Output: False
+```
+
+In this implementation, the `is_subsequence` function takes two strings `s` and `t` as input. It initializes two pointers, `i` and `j`, for each string and iterates through both strings using these pointers. If the characters at the current positions of the pointers match, it moves both pointers to the next character in their respective strings. If they don't match, it only moves the pointer for string `t`. After reaching the end of string `s`, if the pointer `i` is equal to the length of `s`, it means all characters of `s` have been matched in `t`, and `s` is a subsequence of `t`.

@@ -19,6 +19,8 @@ Here are some common Big O complexities:
 Big O notation allows developers to analyze and compare the efficiency of algorithms without getting bogged down in the details of hardware or software implementation. It helps in making informed decisions about algorithm selection and optimization based on the specific requirements of an application.
 
 
+### Analyzing space complexity
+
 Space complexity analysis involves evaluating the amount of memory an algorithm uses as a function of the input size. Similar to time complexity, space complexity is expressed using Big O notation, providing an upper bound on the amount of memory the algorithm requires as the input size increases.
 
 Here's a brief overview of how space complexity is analyzed:

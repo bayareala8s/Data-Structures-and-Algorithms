@@ -124,3 +124,43 @@ print(is_palindrome(string2))  # Output: True
 ```
 
 This function first preprocesses the input string by converting it to lowercase and removing non-alphanumeric characters. Then, it initializes two pointers at the beginning and end of the string and compares characters at corresponding positions. If any pair of characters doesn't match, it returns `False`. If the loop completes without returning `False`, the string is a palindrome, and the function returns `True`.
+
+
+Given a sorted array of unique integers and a target integer, return true if there exists a pair of numbers that sum to target, false otherwise.
+
+You can solve this problem efficiently using the two pointers technique. Since the input array is sorted, you can use two pointers, one starting from the beginning and the other from the end of the array. By moving these pointers inward, you can determine if there exists a pair of numbers that sum to the target.
+
+Here's how you can implement this in Python:
+
+```python
+def has_pair_with_sum(nums, target):
+    # Initialize two pointers
+    left, right = 0, len(nums) - 1
+    
+    # Continue until the pointers meet
+    while left < right:
+        current_sum = nums[left] + nums[right]
+        
+        # If the current sum equals the target, return True
+        if current_sum == target:
+            return True
+        # If the current sum is less than the target, move the left pointer to the right
+        elif current_sum < target:
+            left += 1
+        # If the current sum is greater than the target, move the right pointer to the left
+        else:
+            right -= 1
+    
+    # If the loop completes without finding a pair, return False
+    return False
+
+# Example usage
+nums = [1, 2, 4, 7, 11]
+target = 9
+print(has_pair_with_sum(nums, target))  # Output: True
+
+target = 13
+print(has_pair_with_sum(nums, target))  # Output: False
+```
+
+In this implementation, the `has_pair_with_sum` function takes a sorted array `nums` and a target integer `target`. It initializes two pointers, `left` and `right`, and iterates through the array using the two pointers. If the sum of the numbers at the current positions of the pointers equals the target, it returns `True`. If the sum is less than the target, it moves the left pointer to the right to increase the sum, and if the sum is greater than the target, it moves the right pointer to the left to decrease the sum. If the loop completes without finding a pair, it returns `False`.

@@ -17,3 +17,22 @@ Here are some common Big O complexities:
 7. **O(n!)**: Factorial time complexity. The algorithm's performance grows factorially with the input size.
 
 Big O notation allows developers to analyze and compare the efficiency of algorithms without getting bogged down in the details of hardware or software implementation. It helps in making informed decisions about algorithm selection and optimization based on the specific requirements of an application.
+
+
+Space complexity analysis involves evaluating the amount of memory an algorithm uses as a function of the input size. Similar to time complexity, space complexity is expressed using Big O notation, providing an upper bound on the amount of memory the algorithm requires as the input size increases.
+
+Here's a brief overview of how space complexity is analyzed:
+
+1. **Memory Usage**: Consider all the memory used by the algorithm, including variables, data structures, and any auxiliary space.
+
+2. **Ignore Constants**: Focus on the dominant terms and ignore constant factors. For example, if an algorithm uses 3n extra bytes of memory, we would simply express it as O(n), ignoring the constant 3.
+
+3. **Recursive Calls**: For recursive algorithms, consider the space required for each recursive call on the call stack. Each recursive call consumes additional memory, and the total space used can be significant for deep recursive calls.
+
+4. **Auxiliary Data Structures**: Analyze the space used by auxiliary data structures such as arrays, lists, stacks, queues, hash tables, etc., created during the algorithm's execution.
+
+5. **Input Space**: Sometimes, the space complexity may depend on the size of the input data itself. For example, if the algorithm reads a large dataset from disk, the space complexity may be proportional to the size of the dataset.
+
+6. **In-place Algorithms**: Some algorithms are designed to operate in constant space, meaning they modify the input in place without requiring additional memory proportional to the input size. These algorithms typically have space complexity O(1).
+
+Analyzing space complexity helps in understanding how much memory an algorithm requires to execute and in identifying potential memory bottlenecks or optimization opportunities. It complements time complexity analysis, providing a more comprehensive understanding of an algorithm's performance characteristics.

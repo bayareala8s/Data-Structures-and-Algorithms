@@ -241,3 +241,30 @@ print(is_subsequence(s, t))  # Output: False
 ```
 
 In this implementation, the `is_subsequence` function takes two strings `s` and `t` as input. It initializes two pointers, `i` and `j`, for each string and iterates through both strings using these pointers. If the characters at the current positions of the pointers match, it moves both pointers to the next character in their respective strings. If they don't match, it only moves the pointer for string `t`. After reaching the end of string `s`, if the pointer `i` is equal to the length of `s`, it means all characters of `s` have been matched in `t`, and `s` is a subsequence of `t`.
+
+Write a function that reverses a string. The input string is given as an array of characters s.
+
+You can reverse the string in-place by using two pointers technique. Initialize two pointers, one at the beginning of the string and the other at the end. Swap the characters at the positions pointed to by the two pointers, and then move the pointers towards each other until they meet in the middle of the string.
+
+Here's how you can implement this in Python:
+
+```python
+def reverse_string(s):
+    # Initialize pointers
+    left, right = 0, len(s) - 1
+    
+    # Reverse the string in-place
+    while left < right:
+        # Swap characters at left and right pointers
+        s[left], s[right] = s[right], s[left]
+        # Move pointers towards each other
+        left += 1
+        right -= 1
+
+# Example usage
+input_string = ['h', 'e', 'l', 'l', 'o']
+reverse_string(input_string)
+print(input_string)  # Output: ['o', 'l', 'l', 'e', 'h']
+```
+
+In this implementation, the `reverse_string` function takes an array of characters `s` as input. It initializes two pointers, `left` and `right`, at the beginning and end of the array, respectively. It then iterates through the array using these pointers, swapping the characters at the positions pointed to by the two pointers, and moving the pointers towards each other until they meet in the middle of the array. This effectively reverses the string in-place.

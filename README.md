@@ -2,6 +2,8 @@
 
 ### Builds a solid foundation in Data Structures and Algorithms
 
+### Big O notation
+
 Big O notation is a mathematical notation used in computer science to describe the performance or complexity of an algorithm in terms of how it responds to changes in input size. It provides a way to classify algorithms based on their efficiency and scalability.
 
 In Big O notation, functions are used to represent the upper bound of an algorithm's time complexity or space complexity. It describes the worst-case scenario, indicating the maximum amount of time or space an algorithm will require as the size of the input grows.

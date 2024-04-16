@@ -62,3 +62,28 @@ In Python, the time complexity of array and string operations can vary depending
    - Naive substring search algorithms have a time complexity of O(n * m), where n is the length of the string and m is the length of the substring being searched for. More efficient algorithms like Knuth-Morris-Pratt (KMP) or Boyer-Moore have better time complexities, typically O(n + m) or O(n), depending on the implementation.
 
 These time complexities represent the worst-case scenarios for the respective operations. Actual performance may vary depending on factors such as hardware, software optimizations, and specific implementations.
+
+### Two pointers
+
+The "two pointers" technique is a common approach used in algorithms and data structures to solve problems efficiently. It involves using two pointers or indices to traverse a sequence or array, typically from different ends or starting points. This technique is often employed to optimize the time complexity of algorithms.
+
+Here's a brief overview of how the two pointers technique works:
+
+1. **Two Pointers Initialization**: Initialize two pointers or indices, often named `left` and `right`, at different positions in the array or sequence.
+
+2. **Traverse the Sequence**: Use the two pointers to traverse the sequence or array in a specific manner, such as moving towards each other, moving in opposite directions, or moving in the same direction at different speeds.
+
+3. **Condition-Based Movement**: At each step of the traversal, update the positions of the pointers based on certain conditions or criteria. These conditions are often related to the problem being solved and may involve comparisons with elements in the sequence or array.
+
+4. **Termination Condition**: Define a termination condition for the traversal based on the problem requirements. This condition determines when the traversal should stop.
+
+The two pointers technique is particularly useful for solving problems involving arrays or sequences, such as finding pairs that satisfy certain conditions, searching for subarrays or substrings with specific properties, and detecting patterns or sequences within the data.
+
+Here are some common applications of the two pointers technique:
+
+1. **Two Sum**: Finding two numbers in an array that sum up to a specific target value.
+2. **Reverse Array or String**: Reversing the elements of an array or characters of a string using two pointers.
+3. **Palindrome Detection**: Checking if a string is a palindrome by comparing characters from both ends simultaneously.
+4. **Merge Two Sorted Arrays**: Merging two sorted arrays into a single sorted array using two pointers to compare elements.
+
+The two pointers technique can often lead to efficient solutions with a time complexity of O(n) or better, where n is the size of the input data. It's a versatile approach that can be adapted to various problem-solving scenarios.

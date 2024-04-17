@@ -354,3 +354,53 @@ def max_subarray_sum(nums):
 ```
 
 In this example, we maintain a sliding window defined by the `left` and `right` pointers. We iterate through the array, adding elements to the current sum as we expand the window (`right` pointer). If the current sum becomes negative (indicating that it's better to start a new window), we shrink the window from the left side (`left` pointer). Finally, we update the maximum sum as the window moves.
+
+
+Given an array of positive integers nums and an integer k, find the length of the longest subarray whose sum is less than or equal to k. 
+
+You can solve this problem using the sliding window technique. Here's how you can approach it:
+
+1. Initialize two pointers, `left` and `right`, to define the boundaries of the window. Set them to the starting position.
+
+2. Iterate through the array while moving the `right` pointer to expand the window. Keep track of the current sum of the elements within the window.
+
+3. While the current sum exceeds the target value `k`, move the `left` pointer to shrink the window, subtracting the element at the left end of the window from the current sum.
+
+4. Update the maximum length of the subarray as the window moves.
+
+5. Repeat steps 2-4 until the `right` pointer reaches the end of the array.
+
+Here's the implementation in Python:
+
+```python
+def max_subarray_length(nums, k):
+    max_length = 0
+    current_sum = 0
+    left = 0
+
+    for right in range(len(nums)):
+        current_sum += nums[right]
+
+        # Shrink the window if the current sum exceeds k
+        while current_sum > k and left <= right:
+            current_sum -= nums[left]
+            left += 1
+
+        # Update the maximum length of the subarray
+        max_length = max(max_length, right - left + 1)
+
+    return max_length
+
+# Example usage
+nums = [1, 2, 3, 4, 5]
+k = 11
+print(max_subarray_length(nums, k))  # Output: 3 (since [1, 2, 3] has sum <= 11)
+```
+
+In this implementation:
+
+- We maintain a sliding window defined by the `left` and `right` pointers.
+- We iterate through the array while expanding the window (`right` pointer) and updating the current sum.
+- If the current sum exceeds the target value `k`, we shrink the window from the left side (`left` pointer) until the current sum is within the limit.
+- We update the maximum length of the subarray as the window moves.
+- Finally, we return the maximum length of the subarray found.

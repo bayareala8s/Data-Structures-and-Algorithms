@@ -317,4 +317,40 @@ This solution has a time complexity of O(n), where n is the number of elements i
 
 ### Sliding window
 
+The sliding window technique is a useful algorithmic pattern for solving problems involving arrays or strings. It involves creating a window of a fixed size that moves or "slides" across the array or string, typically from left to right. The window maintains a subset of elements or characters, and you perform some operation on this subset.
 
+Here's a step-by-step guide on how to implement the sliding window technique:
+
+1. **Initialization**: Initialize two pointers, typically `left` and `right`, to define the boundaries of the window. Set them to the starting position.
+
+2. **Expand the Window**: Move the `right` pointer to expand the window, adding elements or characters to the window until you reach a condition where the window no longer satisfies a specific constraint (e.g., a maximum size or a certain property).
+
+3. **Shrink the Window**: Once the window no longer satisfies the constraint, move the `left` pointer to shrink the window, removing elements or characters from the window until the constraint is satisfied again.
+
+4. **Update the Result**: Keep track of the result as the window moves, depending on the problem requirements. For example, you might calculate a sum, find the maximum or minimum value, or perform some other operation on the elements or characters within the window.
+
+5. **Repeat**: Continue moving the window until the `right` pointer reaches the end of the array or string.
+
+The sliding window technique is commonly used to solve problems related to substring or subarray manipulation, such as finding the maximum sum of a subarray, finding the smallest substring containing all characters of a given set, or finding the longest substring without repeating characters.
+
+Here's a simple example of using the sliding window technique to find the maximum sum of a subarray (also known as the "maximum sum subarray problem"):
+
+```python
+def max_subarray_sum(nums):
+    max_sum = float('-inf')
+    current_sum = 0
+    left = 0
+
+    for right in range(len(nums)):
+        current_sum += nums[right]
+        
+        while current_sum < nums[right]:
+            current_sum -= nums[left]
+            left += 1
+        
+        max_sum = max(max_sum, current_sum)
+
+    return max_sum
+```
+
+In this example, we maintain a sliding window defined by the `left` and `right` pointers. We iterate through the array, adding elements to the current sum as we expand the window (`right` pointer). If the current sum becomes negative (indicating that it's better to start a new window), we shrink the window from the left side (`left` pointer). Finally, we update the maximum sum as the window moves.

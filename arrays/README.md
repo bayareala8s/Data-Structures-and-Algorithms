@@ -268,3 +268,48 @@ print(input_string)  # Output: ['o', 'l', 'l', 'e', 'h']
 ```
 
 In this implementation, the `reverse_string` function takes an array of characters `s` as input. It initializes two pointers, `left` and `right`, at the beginning and end of the array, respectively. It then iterates through the array using these pointers, swapping the characters at the positions pointed to by the two pointers, and moving the pointers towards each other until they meet in the middle of the array. This effectively reverses the string in-place.
+
+
+Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+
+You can solve this problem efficiently using a two-pointer approach. Since the original array is sorted in non-decreasing order, you can use two pointers to iterate over the array from both ends. Compare the squares of the elements pointed to by the pointers and add the larger squared value to the result array. Move the pointers inward until they meet in the middle of the array.
+
+Here's how you can implement this in Python:
+
+```python
+def sorted_squares(nums):
+    n = len(nums)
+    result = [0] * n
+    left, right = 0, n - 1
+    index = n - 1
+    
+    while left <= right:
+        left_square = nums[left] ** 2
+        right_square = nums[right] ** 2
+        
+        if left_square > right_square:
+            result[index] = left_square
+            left += 1
+        else:
+            result[index] = right_square
+            right -= 1
+        index -= 1
+    
+    return result
+
+# Example usage
+nums = [-4, -1, 0, 3, 10]
+result = sorted_squares(nums)
+print(result)  # Output: [0, 1, 9, 16, 100]
+```
+
+In this implementation:
+
+- We initialize a result array of the same length as the input array `nums`.
+- We use two pointers, `left` starting from the beginning of the array and `right` starting from the end of the array.
+- We iterate over the array using these pointers and compare the squares of the elements pointed to by the pointers.
+- We add the larger squared value to the result array at the corresponding index.
+- We move the pointers inward until they meet in the middle of the array.
+- Finally, we return the result array containing the squares of each number sorted in non-decreasing order.
+
+This solution has a time complexity of O(n), where n is the number of elements in the input array `nums`, since we only iterate over the array once.

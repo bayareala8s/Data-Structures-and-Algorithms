@@ -313,3 +313,8 @@ In this implementation:
 - Finally, we return the result array containing the squares of each number sorted in non-decreasing order.
 
 This solution has a time complexity of O(n), where n is the number of elements in the input array `nums`, since we only iterate over the array once.
+
+
+### Sliding window
+
+

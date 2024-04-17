@@ -455,3 +455,53 @@ In this implementation:
 - If the count of zeros within the window exceeds 1, we shrink the window from the left side (`left` pointer) until the count of zeros within the window is at most 1.
 - We update the maximum length of the substring containing only "1" as the window moves.
 - Finally, we return the maximum length of the substring found.
+
+Given an array of positive integers nums and an integer k, return the number of subarrays where the product of all the elements in the subarray is strictly less than k
+
+
+To solve this problem, you can use the sliding window technique. Here's how you can approach it:
+
+1. Initialize two pointers, `left` and `right`, to define the boundaries of the window. Set them to the starting position.
+
+2. Iterate through the array while moving the `right` pointer to expand the window. Keep track of the product of all the elements within the window.
+
+3. While the product of all elements within the window is greater than or equal to `k`, move the `left` pointer to shrink the window, dividing the product by the element at the left end of the window.
+
+4. Update the count of valid subarrays as the window moves.
+
+5. Repeat steps 2-4 until the `right` pointer reaches the end of the array.
+
+Here's the implementation in Python:
+
+```python
+def count_subarrays(nums, k):
+    count = 0
+    product = 1
+    left = 0
+
+    for right in range(len(nums)):
+        product *= nums[right]
+
+        # Shrink the window if the product is greater than or equal to k
+        while product >= k and left <= right:
+            product //= nums[left]
+            left += 1
+
+        # Update the count of valid subarrays
+        count += right - left + 1
+
+    return count
+
+# Example usage
+nums = [10, 5, 2, 6]
+k = 100
+print(count_subarrays(nums, k))  # Output: 8
+```
+
+In this implementation:
+
+- We maintain a sliding window defined by the `left` and `right` pointers.
+- We iterate through the array while expanding the window (`right` pointer) and updating the product of all elements within the window.
+- If the product of all elements within the window is greater than or equal to `k`, we shrink the window from the left side (`left` pointer) until the product is less than `k`.
+- We update the count of valid subarrays as the window moves.
+- Finally, we return the count of valid subarrays found.

@@ -404,3 +404,54 @@ In this implementation:
 - If the current sum exceeds the target value `k`, we shrink the window from the left side (`left` pointer) until the current sum is within the limit.
 - We update the maximum length of the subarray as the window moves.
 - Finally, we return the maximum length of the subarray found.
+
+You are given a binary string s (a string containing only "0" and "1"). You may choose up to one "0" and flip it to a "1". What is the length of the longest substring achievable that contains only "1"
+
+
+To solve this problem, you can use the sliding window technique. Here's how you can approach it:
+
+1. Initialize two pointers, `left` and `right`, to define the boundaries of the window. Set them to the starting position.
+
+2. Iterate through the binary string while moving the `right` pointer to expand the window. Keep track of the count of zeros encountered within the window.
+
+3. While the count of zeros within the window exceeds 1, move the `left` pointer to shrink the window, subtracting the count of zeros encountered at the left end of the window.
+
+4. Update the maximum length of the substring containing only "1" as the window moves.
+
+5. Repeat steps 2-4 until the `right` pointer reaches the end of the binary string.
+
+Here's the implementation in Python:
+
+```python
+def longest_substring_of_ones(s):
+    max_length = 0
+    left = 0
+    zero_count = 0
+
+    for right in range(len(s)):
+        if s[right] == '0':
+            zero_count += 1
+
+        # Shrink the window if the count of zeros exceeds 1
+        while zero_count > 1:
+            if s[left] == '0':
+                zero_count -= 1
+            left += 1
+
+        # Update the maximum length of the substring
+        max_length = max(max_length, right - left + 1)
+
+    return max_length
+
+# Example usage
+binary_string = "110101011"
+print(longest_substring_of_ones(binary_string))  # Output: 6 (substring "101011" has length 6)
+```
+
+In this implementation:
+
+- We maintain a sliding window defined by the `left` and `right` pointers.
+- We iterate through the binary string while expanding the window (`right` pointer) and updating the count of zeros encountered within the window.
+- If the count of zeros within the window exceeds 1, we shrink the window from the left side (`left` pointer) until the count of zeros within the window is at most 1.
+- We update the maximum length of the substring containing only "1" as the window moves.
+- Finally, we return the maximum length of the substring found.

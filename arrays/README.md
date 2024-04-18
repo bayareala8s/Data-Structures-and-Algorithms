@@ -89,7 +89,7 @@ Here are some common applications of the two pointers technique:
 The two pointers technique can often lead to efficient solutions with a time complexity of O(n) or better, where n is the size of the input data. It's a versatile approach that can be adapted to various problem-solving scenarios.
 
 
-Given a string s, return true if it is a palindrome, false otherwise. 
+- Given a string s, return true if it is a palindrome, false otherwise. 
 
 One approach to determine if a string is a palindrome is to use the two pointers technique. You can use two pointers, one starting from the beginning of the string and the other starting from the end, and compare characters at corresponding positions. If all characters match, then the string is a palindrome.
 
@@ -126,7 +126,7 @@ print(is_palindrome(string2))  # Output: True
 This function first preprocesses the input string by converting it to lowercase and removing non-alphanumeric characters. Then, it initializes two pointers at the beginning and end of the string and compares characters at corresponding positions. If any pair of characters doesn't match, it returns `False`. If the loop completes without returning `False`, the string is a palindrome, and the function returns `True`.
 
 
-Given a sorted array of unique integers and a target integer, return true if there exists a pair of numbers that sum to target, false otherwise.
+- Given a sorted array of unique integers and a target integer, return true if there exists a pair of numbers that sum to target, false otherwise.
 
 You can solve this problem efficiently using the two pointers technique. Since the input array is sorted, you can use two pointers, one starting from the beginning and the other from the end of the array. By moving these pointers inward, you can determine if there exists a pair of numbers that sum to the target.
 
@@ -166,7 +166,7 @@ print(has_pair_with_sum(nums, target))  # Output: False
 In this implementation, the `has_pair_with_sum` function takes a sorted array `nums` and a target integer `target`. It initializes two pointers, `left` and `right`, and iterates through the array using the two pointers. If the sum of the numbers at the current positions of the pointers equals the target, it returns `True`. If the sum is less than the target, it moves the left pointer to the right to increase the sum, and if the sum is greater than the target, it moves the right pointer to the left to decrease the sum. If the loop completes without finding a pair, it returns `False`.
 
 
-Given two sorted integer arrays arr1 and arr2, return a new array that combines both of them and is also sorted.
+- Given two sorted integer arrays arr1 and arr2, return a new array that combines both of them and is also sorted.
 
 You can merge the two sorted arrays into a new sorted array by using the two pointers technique. Initialize two pointers, one for each array, and compare the elements at the corresponding positions. Add the smaller element to the new array, and move the pointer of the array from which the element was taken. Repeat this process until you reach the end of both arrays.
 
@@ -208,7 +208,7 @@ print(merge_sorted_arrays(arr1, arr2))  # Output: [1, 2, 3, 4, 5, 6, 7]
 In this implementation, the `merge_sorted_arrays` function takes two sorted arrays `arr1` and `arr2` as input. It initializes two pointers, `i` and `j`, for each array and iterates through both arrays using these pointers. It compares the elements at the current positions of the pointers and adds the smaller one to the `merged` array. After reaching the end of one array, it adds any remaining elements from the other array. Finally, it returns the merged array.
 
 
-Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+- Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
 
 You can solve this problem by iterating through both strings using two pointers, one for each string. At each step, compare the characters at the current positions of the pointers. If they match, move both pointers to the next character in their respective strings. If they don't match, only move the pointer for the second string. Continue this process until you reach the end of the first string.
 
@@ -242,7 +242,7 @@ print(is_subsequence(s, t))  # Output: False
 
 In this implementation, the `is_subsequence` function takes two strings `s` and `t` as input. It initializes two pointers, `i` and `j`, for each string and iterates through both strings using these pointers. If the characters at the current positions of the pointers match, it moves both pointers to the next character in their respective strings. If they don't match, it only moves the pointer for string `t`. After reaching the end of string `s`, if the pointer `i` is equal to the length of `s`, it means all characters of `s` have been matched in `t`, and `s` is a subsequence of `t`.
 
-Write a function that reverses a string. The input string is given as an array of characters s.
+- Write a function that reverses a string. The input string is given as an array of characters s.
 
 You can reverse the string in-place by using two pointers technique. Initialize two pointers, one at the beginning of the string and the other at the end. Swap the characters at the positions pointed to by the two pointers, and then move the pointers towards each other until they meet in the middle of the string.
 
@@ -270,7 +270,7 @@ print(input_string)  # Output: ['o', 'l', 'l', 'e', 'h']
 In this implementation, the `reverse_string` function takes an array of characters `s` as input. It initializes two pointers, `left` and `right`, at the beginning and end of the array, respectively. It then iterates through the array using these pointers, swapping the characters at the positions pointed to by the two pointers, and moving the pointers towards each other until they meet in the middle of the array. This effectively reverses the string in-place.
 
 
-Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+- Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
 
 You can solve this problem efficiently using a two-pointer approach. Since the original array is sorted in non-decreasing order, you can use two pointers to iterate over the array from both ends. Compare the squares of the elements pointed to by the pointers and add the larger squared value to the result array. Move the pointers inward until they meet in the middle of the array.
 
@@ -356,7 +356,7 @@ def max_subarray_sum(nums):
 In this example, we maintain a sliding window defined by the `left` and `right` pointers. We iterate through the array, adding elements to the current sum as we expand the window (`right` pointer). If the current sum becomes negative (indicating that it's better to start a new window), we shrink the window from the left side (`left` pointer). Finally, we update the maximum sum as the window moves.
 
 
-Given an array of positive integers nums and an integer k, find the length of the longest subarray whose sum is less than or equal to k. 
+- Given an array of positive integers nums and an integer k, find the length of the longest subarray whose sum is less than or equal to k. 
 
 You can solve this problem using the sliding window technique. Here's how you can approach it:
 
@@ -405,7 +405,7 @@ In this implementation:
 - We update the maximum length of the subarray as the window moves.
 - Finally, we return the maximum length of the subarray found.
 
-You are given a binary string s (a string containing only "0" and "1"). You may choose up to one "0" and flip it to a "1". What is the length of the longest substring achievable that contains only "1"
+- You are given a binary string s (a string containing only "0" and "1"). You may choose up to one "0" and flip it to a "1". What is the length of the longest substring achievable that contains only "1"
 
 
 To solve this problem, you can use the sliding window technique. Here's how you can approach it:
@@ -456,7 +456,7 @@ In this implementation:
 - We update the maximum length of the substring containing only "1" as the window moves.
 - Finally, we return the maximum length of the substring found.
 
-Given an array of positive integers nums and an integer k, return the number of subarrays where the product of all the elements in the subarray is strictly less than k
+- Given an array of positive integers nums and an integer k, return the number of subarrays where the product of all the elements in the subarray is strictly less than k
 
 
 To solve this problem, you can use the sliding window technique. Here's how you can approach it:

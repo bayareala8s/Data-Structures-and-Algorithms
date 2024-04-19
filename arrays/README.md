@@ -63,6 +63,89 @@ In Python, the time complexity of array and string operations can vary depending
 
 These time complexities represent the worst-case scenarios for the respective operations. Actual performance may vary depending on factors such as hardware, software optimizations, and specific implementations.
 
+
+### some common list methods in Python along with examples:
+
+1. `append()`: Adds an element to the end of the list.
+
+```python
+my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list)  # Output: [1, 2, 3, 4]
+```
+
+2. `extend()`: Adds elements from another list to the end of the current list.
+
+```python
+my_list = [1, 2, 3]
+my_list.extend([4, 5])
+print(my_list)  # Output: [1, 2, 3, 4, 5]
+```
+
+3. `insert()`: Inserts an element at a specified position in the list.
+
+```python
+my_list = [1, 2, 3]
+my_list.insert(1, 'a')
+print(my_list)  # Output: [1, 'a', 2, 3]
+```
+
+4. `remove()`: Removes the first occurrence of a specified value from the list.
+
+```python
+my_list = [1, 2, 3, 1]
+my_list.remove(1)
+print(my_list)  # Output: [2, 3, 1]
+```
+
+5. `pop()`: Removes and returns the element at a specified index in the list. If no index is specified, it removes and returns the last element.
+
+```python
+my_list = [1, 2, 3]
+print(my_list.pop(1))  # Output: 2
+print(my_list)          # Output: [1, 3]
+```
+
+6. `clear()`: Removes all elements from the list.
+
+```python
+my_list = [1, 2, 3]
+my_list.clear()
+print(my_list)  # Output: []
+```
+
+7. `index()`: Returns the index of the first occurrence of a specified value in the list.
+
+```python
+my_list = [1, 2, 3]
+print(my_list.index(2))  # Output: 1
+```
+
+8. `count()`: Returns the number of occurrences of a specified value in the list.
+
+```python
+my_list = [1, 2, 2, 3]
+print(my_list.count(2))  # Output: 2
+```
+
+9. `sort()`: Sorts the elements of the list in ascending order.
+
+```python
+my_list = [3, 1, 2]
+my_list.sort()
+print(my_list)  # Output: [1, 2, 3]
+```
+
+10. `reverse()`: Reverses the order of the elements in the list.
+
+```python
+my_list = [1, 2, 3]
+my_list.reverse()
+print(my_list)  # Output: [3, 2, 1]
+```
+
+These are some of the commonly used list methods in Python. They provide powerful capabilities for manipulating lists in various ways.
+
 ### Two pointers
 
 The "two pointers" technique is a common approach used in algorithms and data structures to solve problems efficiently. It involves using two pointers or indices to traverse a sequence or array, typically from different ends or starting points. This technique is often employed to optimize the time complexity of algorithms.

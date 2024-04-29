@@ -146,6 +146,43 @@ print(my_list)  # Output: [3, 2, 1]
 
 These are some of the commonly used list methods in Python. They provide powerful capabilities for manipulating lists in various ways.
 
+
+Arrays are fundamental data structures in computer science and there are many operations that can be performed on them. Here are some common operations:
+
+1. **Access**: Retrieve an element from the array at a specific index.
+
+2. **Update**: Change the value of an element at a specific index.
+
+3. **Insertion**: Add an element at a specific index. This operation may require shifting elements to make room for the new element.
+
+4. **Deletion**: Remove an element at a specific index. This operation may require shifting elements to fill the space left by the removed element.
+
+5. **Search**: Find the index of an element in the array.
+
+6. **Sort**: Arrange the elements of the array in a specific order (e.g., ascending, descending).
+
+7. **Slice**: Create a new array that is a subset of the original array.
+
+8. **Merge**: Combine two arrays into one.
+
+9. **Map**: Apply a function to each element in the array and create a new array with the results.
+
+10. **Reduce**: Apply a function to each element in the array in a cumulative way. For example, summing all elements.
+
+11. **Filter**: Create a new array with only the elements that satisfy a certain condition.
+
+12. **Reshape**: Change the dimensions of the array, for example in multi-dimensional arrays.
+
+13. **Flatten**: Convert a multi-dimensional array into a one-dimensional array.
+
+14. **Reverse**: Reverse the order of elements in the array.
+
+These operations form the basis of many algorithms and are widely used in various fields such as data analysis, machine learning, and software development.
+
+### One Pointer
+
+
+
 ### Two pointers
 
 The "two pointers" technique is a common approach used in algorithms and data structures to solve problems efficiently. It involves using two pointers or indices to traverse a sequence or array, typically from different ends or starting points. This technique is often employed to optimize the time complexity of algorithms.

@@ -179,8 +179,6 @@ Arrays are fundamental data structures in computer science and there are many op
 
 These operations form the basis of many algorithms and are widely used in various fields such as data analysis, machine learning, and software development.
 
-### One Pointer
-
 
 
 ### Two pointers

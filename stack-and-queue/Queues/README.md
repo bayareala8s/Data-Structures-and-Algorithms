@@ -152,7 +152,7 @@ Disadvantages of using a Queue Data Structure:
 
 5. **Complexity in some operations**: Some operations like searching or accessing an element at a particular index can be complex and time-consuming as you have to traverse from the front of the queue.
 
-### Here is a Python implementation of a Queue using a linked list. In this implementation, we'll create a Node class to represent each node in the linked list, and a Queue class to represent the queue itself.
+Here is a Python implementation of a Queue using a linked list. In this implementation, we'll create a Node class to represent each node in the linked list, and a Queue class to represent the queue itself.
 
 ```python
 class Node:

@@ -95,5 +95,111 @@ Common operations performed on a Binary Search Tree (BST) include:
 6. **Finding Successor and Predecessor**: The successor of a node is the node with the smallest key greater than the node's key. The predecessor of a node is the node with the largest key smaller than the node's key. These operations are useful in many algorithms that operate on BSTs.
 
 
+Here is a Python implementation of a Binary Search Tree (BST) with detailed complexity and space analysis:
+
+```python
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.right = None
+        self.val = key
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+    # Insert node
+    # Time complexity: O(log n) on average, O(n) in worst case
+    # Space complexity: O(n)
+    def insert(self, key):
+        if self.root is None:
+            self.root = Node(key)
+        else:
+            self._insert(self.root, key)
+
+    def _insert(self, node, key):
+        if key < node.val:
+            if node.left is None:
+                node.left = Node(key)
+            else:
+                self._insert(node.left, key)
+        elif key > node.val:
+            if node.right is None:
+                node.right = Node(key)
+            else:
+                self._insert(node.right, key)
+
+    # In-order traversal
+    # Time complexity: O(n)
+    # Space complexity: O(n)
+    def inorder(self, node):
+        if node:
+            self.inorder(node.left)
+            print(node.val)
+            self.inorder(node.right)
+
+    # Search for a value in the BST
+    # Time complexity: O(log n) on average, O(n) in worst case
+    # Space complexity: O(n)
+    def search(self, key):
+        return self._search(self.root, key)
+
+    def _search(self, node, key):
+        if node is None or node.val == key:
+            return node
+        if key < node.val:
+            return self._search(node.left, key)
+        return self._search(node.right, key)
+
+    # Delete a node from the BST
+    # Time complexity: O(log n) on average, O(n) in worst case
+    # Space complexity: O(n)
+    def delete(self, key):
+        self.root = self._delete(self.root, key)
+
+    def _delete(self, node, key):
+        if node is None:
+            return node
+        if key < node.val:
+            node.left = self._delete(node.left, key)
+        elif key > node.val:
+            node.right = self._delete(node.right, key)
+        else:
+            if node.left is None:
+                return node.right
+            elif node.right is None:
+                return node.left
+            temp = self._minValueNode(node.right)
+            node.val = temp.val
+            node.right = self._delete(node.right, temp.val)
+        return node
+
+    def _minValueNode(self, node):
+        current = node
+        while current.left is not None:
+            current = current.left
+        return current
+
+# Real-world example: Storing student grades in a BST
+bst = BST()
+grades = [85, 75, 95, 70, 80, 90, 100]
+for grade in grades:
+    bst.insert(grade)
+
+# Print the grades in ascending order
+bst.inorder(bst.root)  # Output: 70, 75, 80, 85, 90, 95, 100
+
+# Search for a grade
+print(bst.search(90))  # Output: Node object (90)
+
+# Delete a grade
+bst.delete(90)
+
+# Print the grades after deletion
+bst.inorder(bst.root)  # Output: 70, 75, 80, 85, 95, 100
+```
+
+This implementation includes methods for insertion, in-order traversal, search, and deletion. It also handles duplicate keys by ignoring them during insertion. The real-world example demonstrates how a BST can be used to store and manipulate student grades.
+
 
 

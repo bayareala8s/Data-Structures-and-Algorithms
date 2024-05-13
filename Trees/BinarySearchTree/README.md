@@ -201,6 +201,21 @@ bst.inorder(bst.root)  # Output: 70, 75, 80, 85, 95, 100
 
 This implementation includes methods for insertion, in-order traversal, search, and deletion. It also handles duplicate keys by ignoring them during insertion. The real-world example demonstrates how a BST can be used to store and manipulate student grades.
 
+A node in a Binary Search Tree (BST) can be visually represented as follows:
+
+```
+  Node
+ /   \
+L     R
+```
+
+Where:
+- `Node` is the current node.
+- `L` is the left child of the node.
+- `R` is the right child of the node.
+
+In a BST, all nodes to the left of a node have values less than the node, and all nodes to the right have values greater than the node.
+
 ### Advantages and disadvantages of using a Binary Search Tree
 
 Advantages of using a Binary Search Tree (BST):

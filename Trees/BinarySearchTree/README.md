@@ -225,5 +225,75 @@ Disadvantages of using a Binary Search Tree (BST):
 
 5. **Rebalancing**: BSTs may need to be rebalanced (for example, using an AVL tree or a red-black tree) to ensure that the tree remains approximately balanced, and operations remain efficient.
 
+Here is a Python implementation of Binary Search Tree (BST) traversal methods including in-order, pre-order, and post-order traversal. A real-world example is also provided.
 
+```python
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.right = None
+        self.val = key
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+    def insert(self, key):
+        if self.root is None:
+            self.root = Node(key)
+        else:
+            self._insert(self.root, key)
+
+    def _insert(self, node, key):
+        if key < node.val:
+            if node.left is None:
+                node.left = Node(key)
+            else:
+                self._insert(node.left, key)
+        elif key > node.val:
+            if node.right is None:
+                node.right = Node(key)
+            else:
+                self._insert(node.right, key)
+
+    def inorder(self, node):
+        if node:
+            self.inorder(node.left)
+            print(node.val)
+            self.inorder(node.right)
+
+    def preorder(self, node):
+        if node:
+            print(node.val)
+            self.preorder(node.left)
+            self.preorder(node.right)
+
+    def postorder(self, node):
+        if node:
+            self.postorder(node.left)
+            self.postorder(node.right)
+            print(node.val)
+
+# Real-world example: Storing book ratings in a BST
+bst = BST()
+ratings = [5, 3, 7, 2, 4, 6, 8]
+for rating in ratings:
+    bst.insert(rating)
+
+# Print the ratings in in-order, pre-order, and post-order
+print("In-order traversal:")
+bst.inorder(bst.root)  # Output: 2, 3, 4, 5, 6, 7, 8
+print("Pre-order traversal:")
+bst.preorder(bst.root)  # Output: 5, 3, 2, 4, 7, 6, 8
+print("Post-order traversal:")
+bst.postorder(bst.root)  # Output: 2, 4, 3, 6, 8, 7, 5
+```
+
+**Time Complexity Analysis**:
+
+- **In-order, Pre-order, and Post-order Traversal**: The time complexity of these operations is O(n), where n is the number of nodes in the tree. This is because each operation visits every node exactly once.
+
+**Space Complexity Analysis**:
+
+- The space complexity of a BST is O(n), where n is the number of nodes in the tree. This space is used to store the nodes of the BST. The space complexity of the traversal operations is O(h), where h is the height of the tree, because in the worst case, if a tree is skewed, a traversal might need to store all nodes at a single level in the call stack.
 

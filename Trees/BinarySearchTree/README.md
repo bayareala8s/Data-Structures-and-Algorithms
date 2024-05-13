@@ -72,3 +72,28 @@ Binary Search Trees (BSTs) are used in many real-world applications due to their
 
 Remember, in all these examples, the BST property must hold: every node's key must be larger than all keys in its left subtree and smaller than all keys in its right subtree.
 
+### Some common operations performed on a Binary Search Tree
+
+Common operations performed on a Binary Search Tree (BST) include:
+
+1. **Search**: This operation is used to check if a key exists in the BST. It starts from the root and compares the key with the current node. If the key is less than the current node, it moves to the left child. If the key is greater, it moves to the right child. This process continues until the key is found or the end of the tree is reached.
+
+2. **Insertion**: This operation is used to add a new key to the BST. Similar to the search operation, it starts from the root and finds the appropriate location to insert the new key. If the new key is less than the current node, it moves to the left child. If the new key is greater, it moves to the right child. This process continues until a null node is reached, where the new key is inserted.
+
+3. **Deletion**: This operation is used to remove a key from the BST. There are three cases to consider when deleting a node:
+   - The node to be deleted is a leaf (has no children). In this case, we just remove the node from the tree.
+   - The node to be deleted has one child. In this case, we elevate the child to the position of the parent.
+   - The node to be deleted has two children. This is the most complex case. We need to find the in-order predecessor or the in-order successor of the node and replace the node with it. Then, we delete the in-order predecessor or successor, which will now be a node with at most one child.
+
+4. **Traversal**: There are three common ways to traverse a BST:
+   - In-order traversal: Traverse the left subtree, visit the root, then traverse the right subtree.
+   - Pre-order traversal: Visit the root, traverse the left subtree, then traverse the right subtree.
+   - Post-order traversal: Traverse the left subtree, traverse the right subtree, then visit the root.
+
+5. **Finding Minimum and Maximum**: The minimum key in a BST is the leftmost leaf node, and the maximum key is the rightmost leaf node. These operations can be performed by traversing the tree from the root to the leftmost or rightmost leaf, respectively.
+
+6. **Finding Successor and Predecessor**: The successor of a node is the node with the smallest key greater than the node's key. The predecessor of a node is the node with the largest key smaller than the node's key. These operations are useful in many algorithms that operate on BSTs.
+
+
+
+

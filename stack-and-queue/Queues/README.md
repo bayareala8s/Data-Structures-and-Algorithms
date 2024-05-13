@@ -83,3 +83,18 @@ printer_queue(queue, print_jobs)
 
 In this example, we first add all the print jobs to the queue. Then, we process each job in the order they were received until the queue is empty. Since a queue is a FIFO (first in, first out) data structure, the jobs are processed in the order they were added to the queue.
 
+
+### Common operations performed on a queue
+
+1. **Enqueue**: This operation adds an element to the end of the queue.
+
+2. **Dequeue**: This operation removes an element from the front of the queue.
+
+3. **Peek/Front**: This operation returns the first element of the queue without removing it.
+
+4. **IsEmpty**: This operation checks if the queue is empty.
+
+5. **IsFull**: This operation checks if the queue is full. This is more relevant in the context of a queue implemented using an array with a fixed size.
+
+6. **Size**: This operation returns the number of elements in the queue.
+

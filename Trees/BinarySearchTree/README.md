@@ -201,5 +201,29 @@ bst.inorder(bst.root)  # Output: 70, 75, 80, 85, 95, 100
 
 This implementation includes methods for insertion, in-order traversal, search, and deletion. It also handles duplicate keys by ignoring them during insertion. The real-world example demonstrates how a BST can be used to store and manipulate student grades.
 
+### Advantages and disadvantages of using a Binary Search Tree
+
+Advantages of using a Binary Search Tree (BST):
+
+1. **Ordered**: BSTs keep their keys in sorted order, which allows for efficient in-order traversal of items in the tree.
+
+2. **Efficient Operations**: Search, insertion, and deletion operations are efficient in a BST, taking O(log n) time on average, where n is the number of nodes in the tree.
+
+3. **Range Queries**: BSTs can be used to quickly find all keys in a given range, which is useful in many applications.
+
+4. **Flexible Size**: The size of a BST can change dynamically with insertions and deletions, so it efficiently uses memory.
+
+Disadvantages of using a Binary Search Tree (BST):
+
+1. **Performance Depends on Tree Height**: The efficiency of operations in a BST depends on the height of the tree. In the worst case (when the tree is skewed or unbalanced), the height of the tree can be n, making operations take O(n) time.
+
+2. **No O(1) Operations**: Unlike some other data structures (like arrays and linked lists), BSTs do not support any O(1) operations.
+
+3. **Complex Implementation**: The code for insertion, deletion, and rebalancing a BST can be more complex than for other data structures.
+
+4. **Extra Memory**: Each node in the BST requires extra storage for the pointers to its child nodes.
+
+5. **Rebalancing**: BSTs may need to be rebalanced (for example, using an AVL tree or a red-black tree) to ensure that the tree remains approximately balanced, and operations remain efficient.
+
 
 

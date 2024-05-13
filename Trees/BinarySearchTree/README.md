@@ -29,3 +29,26 @@ Here are the basic operations that can be performed on a Binary Search Tree:
   - Post-order traversal: Traverse the left subtree, traverse the right subtree, then visit the root.
 
 These operations make the Binary Search Tree an effective data structure for many problems where the data needs to be stored in a sorted manner and the data is constantly being inserted or deleted.
+
+Here's a simple visual representation of a Binary Search Tree (BST):
+
+```
+        8
+       / \
+      3   10
+     / \    \
+    1   6    14
+       / \   /
+      4   7 13
+```
+
+In this Binary Search Tree:
+
+- `8` is the root of the tree.
+- `3` and `10` are the children of `8`. `3` is the left child (because `3 < 8`), and `10` is the right child (because `10 > 8`).
+- Similarly, for node `3`, `1` is the left child and `6` is the right child.
+- Node `10` has `14` as its right child.
+- Node `6` has `4` and `7` as its left and right child respectively.
+- Node `14` has `13` as its left child.
+
+This tree satisfies the property of a Binary Search Tree: for any given node, all elements in its left subtree are less than the node, and all elements in its right subtree are greater than the node.

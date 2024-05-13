@@ -52,3 +52,23 @@ In this Binary Search Tree:
 - Node `14` has `13` as its left child.
 
 This tree satisfies the property of a Binary Search Tree: for any given node, all elements in its left subtree are less than the node, and all elements in its right subtree are greater than the node.
+
+
+### Real-world examples of Binary Search Tree
+
+Binary Search Trees (BSTs) are used in many real-world applications due to their efficient search, insert, and delete operations. Here are a few examples:
+
+1. **Database Systems**: BSTs are used in database systems to speed up the process of finding, inserting, and deleting records. The keys represent record IDs, and the values are the records themselves. Because BSTs maintain their keys in sorted order, they can perform these operations quickly, which is crucial for large databases.
+
+2. **File Systems**: Similar to database systems, file systems use BSTs to locate files quickly. The keys could represent file names, and the values could be the file data or metadata.
+
+3. **Autocomplete Features**: Many applications (like search engines or text editors) that offer autocomplete functionality use BSTs. As the user types, the application performs a search in the BST to find and suggest completions based on the current input.
+
+4. **Network Routers**: Routers use BSTs to route packets to their destination IP addresses. The IP addresses are the keys in the BST, and the values are the next hop information.
+
+5. **Game Trees**: In game theory, BSTs can be used to construct game trees which represent the possible moves in a game. The nodes of the tree represent game states, and the edges represent moves.
+
+6. **Ranking Systems**: In ranking systems like those used in sports or competitive programming, BSTs can be used to quickly determine the rank of an individual or team. The keys in the BST could represent scores or times, and the values could be the individuals or teams.
+
+Remember, in all these examples, the BST property must hold: every node's key must be larger than all keys in its left subtree and smaller than all keys in its right subtree.
+

@@ -112,7 +112,7 @@ In this example:
 These examples illustrate the use of control structures in real-world scenarios, highlighting how conditional statements and loops can be used to manage program flow effectively.
 
 
-###Python provides several types of loops to handle repetitive tasks efficiently. The primary loops in Python are `for` loops and `while` loops. Additionally, there are control statements like `break`, `continue`, and `pass` that help in managing these loops.
+### Python provides several types of loops to handle repetitive tasks efficiently. The primary loops in Python are `for` loops and `while` loops. Additionally, there are control statements like `break`, `continue`, and `pass` that help in managing these loops.
 
 ### 1. `for` Loop
 

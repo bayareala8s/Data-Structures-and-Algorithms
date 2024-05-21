@@ -42,7 +42,8 @@ if __name__ == '__main__':
     unittest.main()
 
 '''
-Certainly! Let's break down the `rotate_left` function in Python, which rotates the elements of a list to the left by `k` positions. We'll explain each part of the code and provide a visual diagram to illustrate the process.
+Let's break down the `rotate_left` function in Python, which rotates the elements of a list to the left by `k` positions. 
+We'll explain each part of the code and provide a visual diagram to illustrate the process.
 
 ### Python Code Explanation
 

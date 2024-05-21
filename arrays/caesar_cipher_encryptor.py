@@ -36,7 +36,8 @@ def caesar_cipher_encryptor(string, key):
     return ''.join(result)
 
 '''
-This function works by iterating over each character in the string, shifting it by `key` places, and appending it to the result string. The time complexity is O(n), where n is the length of the string, and the space complexity is also O(n) because a new string is created.
+This function works by iterating over each character in the string, shifting it by `key` places, and appending it to the result string. 
+The time complexity is O(n), where n is the length of the string, and the space complexity is also O(n) because a new string is created.
 '''
 
 import unittest

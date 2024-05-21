@@ -49,7 +49,8 @@ if __name__ == '__main__':
     unittest.main()
 
 '''
-The function `move_zeroes(nums)` is designed to move all the zeros in the input list `nums` to the end while maintaining the relative order of the non-zero elements. Here's a detailed explanation of the code along with a diagram to visualize the process.
+The function `move_zeroes(nums)` is designed to move all the zeros in the input list `nums` to the end while maintaining the relative order of the non-zero elements. 
+Here's a detailed explanation of the code along with a diagram to visualize the process.
 
 ### Python Code Explanation
 

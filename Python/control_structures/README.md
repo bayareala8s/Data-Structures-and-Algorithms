@@ -509,3 +509,199 @@ In this example:
 - We also calculate the overall total and average sales across all regions.
 
 This comprehensive guide demonstrates the versatility of `for` loops in Python and how they can be applied to various real-world scenarios.
+
+### In Python, the `range()` function is commonly used with loops, especially `for` loops, to generate a sequence of numbers. Here are different ways to use `range()` with loops along with detailed real-world examples:
+
+### 1. Basic `for` Loop with `range()`
+
+**Example: Printing Numbers from 0 to 9**
+
+```python
+for i in range(10):
+    print(i)
+```
+
+In this example:
+- `range(10)` generates numbers from 0 to 9.
+- The `for` loop iterates over this sequence, printing each number.
+
+### 2. Specifying Start and Stop
+
+**Example: Printing Numbers from 5 to 14**
+
+```python
+for i in range(5, 15):
+    print(i)
+```
+
+In this example:
+- `range(5, 15)` generates numbers from 5 to 14.
+- The `for` loop iterates over this range, printing each number.
+
+### 3. Specifying Start, Stop, and Step
+
+**Example: Printing Even Numbers from 0 to 18**
+
+```python
+for i in range(0, 20, 2):
+    print(i)
+```
+
+In this example:
+- `range(0, 20, 2)` generates numbers from 0 to 18 in steps of 2.
+- The `for` loop iterates over this sequence, printing each even number.
+
+### 4. Reverse Iteration
+
+**Example: Countdown from 10 to 1**
+
+```python
+for i in range(10, 0, -1):
+    print(i)
+```
+
+In this example:
+- `range(10, 0, -1)` generates numbers from 10 to 1 in reverse order.
+- The `for` loop iterates over this sequence, printing each number.
+
+### Real-World Examples Using `range()`
+
+### 1. Generating a Sequence of IDs
+
+**Example: Assigning IDs to New Employees**
+
+```python
+employee_count = 5
+employee_ids = []
+
+for i in range(1, employee_count + 1):
+    employee_ids.append(f"EMP{i:03}")
+
+print(employee_ids)
+```
+
+In this example:
+- `range(1, employee_count + 1)` generates numbers from 1 to the number of employees.
+- Each number is used to create a unique employee ID in the format `EMP001`, `EMP002`, etc.
+
+### 2. Creating a Multiplication Table
+
+**Example:  Multiplication Table for a Given Number**
+
+```python
+number = 7
+for i in range(1, 11):
+    print(f"{number} x {i} = {number * i}")
+```
+
+In this example:
+- `range(1, 11)` generates numbers from 1 to 10.
+- The `for` loop iterates over this range, printing the multiplication table for the specified number.
+
+### 3. Simulating a Simple Voting System
+
+**Example: Collecting Votes for Candidates**
+
+```python
+candidates = ["Alice", "Bob", "Charlie"]
+votes = [0] * len(candidates)
+
+# Simulate voting
+num_voters = 10
+
+for i in range(num_voters):
+    vote = int(input(f"Voter {i + 1}, vote for (0: Alice, 1: Bob, 2: Charlie): "))
+    if 0 <= vote < len(candidates):
+        votes[vote] += 1
+    else:
+        print("Invalid vote.")
+
+# Display voting results
+for i in range(len(candidates)):
+    print(f"{candidates[i]}: {votes[i]} votes")
+```
+
+In this example:
+- `range(num_voters)` generates numbers from 0 to the number of voters minus one.
+- The `for` loop simulates each voter casting a vote and increments the corresponding candidate's vote count.
+
+### 4. Generating Fibonacci Series
+
+**Example: Generating First N Fibonacci Numbers**
+
+```python
+n = 10
+fib_series = [0, 1]
+
+for i in range(2, n):
+    next_number = fib_series[-1] + fib_series[-2]
+    fib_series.append(next_number)
+
+print(f"First {n} Fibonacci numbers: {fib_series}")
+```
+
+In this example:
+- `range(2, n)` generates numbers from 2 to n-1.
+- The `for` loop calculates the next Fibonacci number by summing the last two numbers in the series and appends it to the list.
+
+### 5. Processing Multiple Files
+
+**Example: Renaming a Batch of Files**
+
+```python
+import os
+
+files = ["report1.txt", "report2.txt", "report3.txt"]
+
+for i in range(len(files)):
+    new_name = f"renamed_report_{i + 1}.txt"
+    os.rename(files[i], new_name)
+    print(f"Renamed {files[i]} to {new_name}")
+```
+
+In this example:
+- `range(len(files))` generates indices from 0 to the length of the files list minus one.
+- The `for` loop iterates over each file, renaming it according to the new naming convention.
+
+### 6. Generating Random Data
+
+**Example: Generating Random Test Scores for Students**
+
+```python
+import random
+
+num_students = 5
+test_scores = []
+
+for i in range(num_students):
+    score = random.randint(50, 100)
+    test_scores.append(score)
+
+print(f"Generated test scores: {test_scores}")
+```
+
+In this example:
+- `range(num_students)` generates numbers from 0 to the number of students minus one.
+- The `for` loop generates a random test score for each student and appends it to the list.
+
+### 7. Analyzing Temperature Data
+
+**Example: Calculating Average Temperature Over a Week**
+
+```python
+temperatures = [70, 72, 68, 65, 74, 73, 71]
+
+total_temp = 0
+
+for temp in range(len(temperatures)):
+    total_temp += temperatures[temp]
+
+average_temp = total_temp / len(temperatures)
+print(f"The average temperature over the week is {average_temp:.2f}°F")
+```
+
+In this example:
+- `range(len(temperatures))` generates indices from 0 to the length of the temperatures list minus one.
+- The `for` loop calculates the total temperature, which is then used to compute the average.
+
+These examples demonstrate the flexibility and utility of the `range()` function in various real-world scenarios, showing how it can be used to generate sequences for iteration and automate repetitive tasks.
